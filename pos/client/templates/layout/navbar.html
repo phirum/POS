@@ -1,0 +1,52 @@
+<template name="pos_navbar">
+    <ul class="nav navbar-nav">
+        <li class="{{isActiveRoute regex='pos.home'}}"><a href="{{pathFor 'pos.home'}}">Home</a></li>
+        <li class="{{isActiveRoute regex='cpanel.exchange'}}">
+            <a href="{{pathFor 'cpanel.exchange'}}">Exchange</a>
+        </li>
+        <li class="{{isActiveRoute regex='pos.checkout'}}">
+            <a href="{{pathFor 'pos.checkout'}}">Make a Sale</a>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <i class="fa fa-wrench"></i> Setting <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li class="{{isActiveRoute regex='pos.category'}}"><a href="{{pathFor 'pos.category'}}">Category</a>
+                </li>
+                <li class="{{isActiveRoute regex='pos.subCategory'}}"><a href="{{pathFor 'pos.subCategory'}}">Sub
+                    Category</a></li>
+                <li class="{{isActiveRoute regex='pos.unit'}}"><a href="{{pathFor 'pos.unit'}}">Unit</a></li>
+                <li class="{{isActiveRoute regex='pos.product'}}"><a href="{{pathFor 'pos.product'}}">Product</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                Manage <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li class="{{isActiveRoute regex='pos.customer'}}"><a
+                        href="{{pathFor 'pos.customer'}}">Customer</a>
+                </li>
+                <li class="{{isActiveRoute regex='pos.supplier'}}"><a
+                        href="{{pathFor 'pos.supplier'}}">Supplier</a>
+                </li>
+                <li class="{{isActiveRoute regex='pos.staff'}}"><a
+                        href="{{pathFor 'pos.staff'}}">Staff</a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                Reports <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li class="{{isActiveRoute regex='pos.myCustomerReport'}}"><a
+                        href="{{pathFor 'pos.myCustomerReport'}}">Sample</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</template>

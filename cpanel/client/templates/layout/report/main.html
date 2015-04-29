@@ -1,0 +1,33 @@
+<head>
+    <link rel="icon" href="rabbit.png">
+    <title>Rabbit Report</title>
+</head>
+
+<template name="layoutReport">
+    <body class="report-body">
+    <div class="report-{{pageSetup.size}}-{{pageSetup.orientation}}">
+
+        {{> yield}}
+
+        <!--Sign-->
+        {{#if sign}}
+            <p>
+            <table width="100%" border="0" style="text-align: center">
+                <tr>
+                    <td width="50%">
+                        Approved By<br><br><br><br><br><br><br>
+                        __________________<br>
+                    </td>
+                    <td>Prepared By<br><br><br><br><br><br><br>
+                        __________________<br></td>
+                </tr>
+
+            </table>
+            </p>
+        {{/if}}
+        <!--/Sign-->
+
+    </div>
+    </body>
+</template>
+
